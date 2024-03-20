@@ -86,12 +86,14 @@ import { AccessibilityHelp } from "@ckeditor/ckeditor5-ui";
 import { Undo } from "@ckeditor/ckeditor5-undo";
 import { EditorWatchdog } from "@ckeditor/ckeditor5-watchdog";
 import { WordCount } from "@ckeditor/ckeditor5-word-count";
+import InsertVideo from "./insert-video";
 
 // You can read more about extending the build with additional plugins in the "Installing plugins" guide.
 // See https://ckeditor.com/docs/ckeditor5/latest/installation/plugins/installing-plugins.html for details.
 
 class Editor extends ClassicEditor {
   public static override builtinPlugins = [
+    InsertVideo,
     AccessibilityHelp,
     Alignment,
     AutoLink,
@@ -214,6 +216,7 @@ class Editor extends ClassicEditor {
         "textPartLanguage",
         "todoList",
         "underline",
+        "insertVideo",
       ],
     },
     language: "vi",
