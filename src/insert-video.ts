@@ -1,7 +1,12 @@
 import Plugin from "@ckeditor/ckeditor5-core/src/plugin";
-import ButtonView from "@ckeditor/ckeditor5-ui/src/button/buttonview";
 import VideoFormView from "./ui/video-form-view";
-import { createDropdown } from "@ckeditor/ckeditor5-ui";
+import {
+  addListToDropdown,
+  createDropdown,
+  ListDropdownItemDefinition,
+} from "@ckeditor/ckeditor5-ui";
+import Model from "@ckeditor/ckeditor5-ui/src/model";
+import Collection from "@ckeditor/ckeditor5-utils/src/collection";
 
 export default class InsertVideo extends Plugin {
   init() {
@@ -13,20 +18,7 @@ export default class InsertVideo extends Plugin {
 
       dropdownView.buttonView.set({
         label: "Insert Video",
-        icon: `<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<style>.cls-1{fill:none;stroke:#020202;stroke-miterlimit:10;stroke-width:1.92px;}</style>
-</defs>
-<g id="roll_brush" data-name="roll brush">
-<polygon class="cls-1" points="15.79 14.93 8.11 18.52 8.11 11.33 15.79 14.93"/>
-<rect class="cls-1" x="1.4" y="1.5" width="21.1" height="21.1"/>
-<polygon class="cls-1" points="22.5 7.25 16.23 7.25 14.31 7.25 1.4 7.25 1.4 1.5 22.5 1.5 22.5 7.25"/>
-<line class="cls-1" x1="4.28" y1="4.38" x2="6.2" y2="4.38"/>
-<line class="cls-1" x1="8.11" y1="4.38" x2="10.03" y2="4.38"/>
-<line class="cls-1" x1="11.95" y1="4.38" x2="13.87" y2="4.38"/>
-</g>
-</svg>`,
+        icon: `<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 0 0-1 1v6H3a1 1 0 1 0 0 2h6v6a1 1 0 1 0 2 0v-6h6a1 1 0 1 0 0-2h-6V3a1 1 0 0 0-1-1Z"/></svg>`,
         tooltip: true,
       });
 
@@ -69,6 +61,18 @@ export default class InsertVideo extends Plugin {
           );
         });
       });
+
+      const formDefinitions = new Collection<ListDropdownItemDefinition>();
+      formDefinitions.add({
+        type: "button",
+        model: new Model({
+          withText: true,
+          label: "Video Form",
+          commandParam: videoForm,
+        }),
+      });
+
+      addListToDropdown(dropdownView, formDefinitions);
 
       return dropdownView;
     });
