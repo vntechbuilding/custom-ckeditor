@@ -165,7 +165,7 @@ class Editor extends ClassicEditor {
     TableToolbar,
     TextPartLanguage,
     TextTransformation,
-    Title,
+    // Title,
     TodoList,
     Underline,
     Undo,
