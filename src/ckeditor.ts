@@ -174,6 +174,7 @@ class Editor extends ClassicEditor {
 
   public static override defaultConfig: EditorConfig = {
     toolbar: {
+      shouldNotGroupWhenFull: true,
       items: [
         "heading",
         "|",
