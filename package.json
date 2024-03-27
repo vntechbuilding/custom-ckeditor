@@ -2,7 +2,7 @@
   "name": "@vntechbuilding/custom-ckeditor",
   "author": "CKSource",
   "description": "A custom CKEditor 5 build made by the CKEditor 5 online builder.",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "license": "SEE LICENSE IN LICENSE.md",
   "private": false,
   "main": "./build/ckeditor.js",

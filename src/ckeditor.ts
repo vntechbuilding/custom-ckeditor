@@ -86,8 +86,8 @@ import { AccessibilityHelp } from "@ckeditor/ckeditor5-ui";
 import { Undo } from "@ckeditor/ckeditor5-undo";
 import { EditorWatchdog } from "@ckeditor/ckeditor5-watchdog";
 import { WordCount } from "@ckeditor/ckeditor5-word-count";
-import InsertVideoObservable from "./insert-video-observable";
 import InsertVideo from "./insert-video";
+import { MyUploadAdapterPlugin } from "./my-upload-adapter-plugin";
 
 // You can read more about extending the build with additional plugins in the "Installing plugins" guide.
 // See https://ckeditor.com/docs/ckeditor5/latest/installation/plugins/installing-plugins.html for details.
@@ -95,6 +95,7 @@ import InsertVideo from "./insert-video";
 class Editor extends ClassicEditor {
   public static override builtinPlugins = [
     // InsertVideoObservable,
+    MyUploadAdapterPlugin,
     InsertVideo,
     AccessibilityHelp,
     Alignment,
