@@ -17,7 +17,7 @@ import { Highlight } from "@ckeditor/ckeditor5-highlight";
 import { HorizontalLine } from "@ckeditor/ckeditor5-horizontal-line";
 import { HtmlEmbed } from "@ckeditor/ckeditor5-html-embed";
 import { DataFilter } from "@ckeditor/ckeditor5-html-support";
-import { Image, ImageCaption, ImageInsert, ImageResize, ImageStyle, ImageToolbar, ImageUpload } from "@ckeditor/ckeditor5-image";
+import { Image, ImageBlock, ImageCaption, ImageInline, ImageInsert, ImageResize, ImageStyle, ImageToolbar, ImageUpload } from "@ckeditor/ckeditor5-image";
 import { Indent } from "@ckeditor/ckeditor5-indent";
 import { TextPartLanguage } from "@ckeditor/ckeditor5-language";
 import { Link, LinkImage } from "@ckeditor/ckeditor5-link";
@@ -37,7 +37,7 @@ import { Undo } from "@ckeditor/ckeditor5-undo";
 import { EditorWatchdog } from "@ckeditor/ckeditor5-watchdog";
 import { MyUploadAdapterPlugin } from "./my-upload-adapter-plugin";
 declare class Editor extends ClassicEditor {
-    static builtinPlugins: (typeof MyUploadAdapterPlugin | typeof Alignment | typeof Autoformat | typeof Superscript | typeof Subscript | typeof Bold | typeof Code | typeof Italic | typeof Strikethrough | typeof Underline | typeof BlockQuote | typeof CloudServices | typeof CodeBlock | typeof SelectAll | typeof Undo | typeof Essentials | typeof FontBackgroundColor | typeof FontColor | typeof FontSize | typeof Heading | typeof Highlight | typeof HorizontalLine | typeof HtmlEmbed | typeof DataFilter | typeof Image | typeof ImageCaption | typeof ImageInsert | typeof ImageResize | typeof ImageStyle | typeof ImageToolbar | typeof ImageUpload | typeof Indent | typeof TextPartLanguage | typeof Link | typeof LinkImage | typeof List | typeof ListProperties | typeof TodoList | typeof Markdown | typeof MediaEmbed | typeof MediaEmbedToolbar | typeof Mention | typeof PageBreak | typeof RemoveFormat | typeof StandardEditingMode | typeof ShowBlocks | typeof SpecialCharactersEssentials | typeof Style | typeof Table | typeof TableCaption | typeof TableCellProperties | typeof TableColumnResize | typeof TableProperties | typeof TableToolbar)[];
+    static builtinPlugins: (typeof MyUploadAdapterPlugin | typeof Alignment | typeof Autoformat | typeof Superscript | typeof Subscript | typeof Bold | typeof Code | typeof Italic | typeof Strikethrough | typeof Underline | typeof BlockQuote | typeof CloudServices | typeof CodeBlock | typeof SelectAll | typeof Undo | typeof Essentials | typeof FontBackgroundColor | typeof FontColor | typeof FontSize | typeof Heading | typeof Highlight | typeof HorizontalLine | typeof HtmlEmbed | typeof DataFilter | typeof Image | typeof ImageBlock | typeof ImageCaption | typeof ImageInline | typeof ImageInsert | typeof ImageResize | typeof ImageStyle | typeof ImageToolbar | typeof ImageUpload | typeof Indent | typeof TextPartLanguage | typeof Link | typeof LinkImage | typeof List | typeof ListProperties | typeof TodoList | typeof Markdown | typeof MediaEmbed | typeof MediaEmbedToolbar | typeof Mention | typeof PageBreak | typeof RemoveFormat | typeof StandardEditingMode | typeof ShowBlocks | typeof SpecialCharactersEssentials | typeof Style | typeof Table | typeof TableCaption | typeof TableCellProperties | typeof TableColumnResize | typeof TableProperties | typeof TableToolbar)[];
     static defaultConfig: EditorConfig;
 }
 declare const _default: {
